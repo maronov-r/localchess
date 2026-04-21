@@ -1,4 +1,5 @@
-const BASE = '/api';
+const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
+const BASE = `${SUPABASE_URL}/functions/v1/api`;
 
 function getToken() {
   return localStorage.getItem('token');
