@@ -1,0 +1,153 @@
+.calibration-page {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.calibration-header {
+  text-align: center;
+}
+.calibration-header h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+.calibration-header p {
+  color: var(--text2);
+}
+
+.calibration-progress {
+  padding: 1rem 1.25rem;
+}
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-size: 0.88rem;
+}
+.estimated-rating {
+  color: var(--text2);
+}
+.estimated-rating strong {
+  color: var(--accent);
+}
+.progress-bar {
+  height: 8px;
+  background: var(--bg3);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 4px;
+  transition: width 0.4s ease;
+}
+
+.calibration-message {
+  padding: 1rem 1.25rem;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-weight: 600;
+}
+
+.calibration-setup h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.level-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+.level-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.75rem 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg3);
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+.level-btn:hover {
+  border-color: var(--accent);
+}
+.level-btn.selected {
+  border-color: var(--accent);
+  background: var(--accent-dim);
+}
+.level-label {
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: var(--text);
+}
+.level-rating {
+  font-size: 0.82rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+.level-desc {
+  font-size: 0.72rem;
+  color: var(--text2);
+  text-align: center;
+}
+
+.calibration-game {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.board-wrapper {
+  flex-shrink: 0;
+}
+.game-controls {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.game-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.calibration-tip {
+  background: var(--accent-dim);
+  border-color: var(--accent);
+}
+.calibration-tip h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.calibration-tip ul {
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.calibration-tip li {
+  font-size: 0.85rem;
+  color: var(--text2);
+}
+
+@media (max-width: 600px) {
+  .level-grid { grid-template-columns: repeat(2, 1fr); }
+  .calibration-game { justify-content: center; }
+}
